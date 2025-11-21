@@ -1,6 +1,4 @@
-# Heap buffer overflow in new_Token() at preproc.c:1227
-
-SEGV in cxxfilt 2.26 at function d_unqualified_name in cp-demangle.c:1596:7
+# SEGV /binutils-2.26/libiberty/./cp-demangle.c:1596:7 in d_unqualified_name
 
 ## Environment
 docker image:silkeh/clang:12(Debian GNU/Linux 11 64 bit, clang 12.0.1)
@@ -26,16 +24,18 @@ export ASAN_OPTIONS=detect_leaks=0
 ./configure
 make -j
 ```
-4. command for reproducing the error
+4. download poc1: 
+```
+wget https://github.com/caozhzh/CRGF-Vul/raw/refs/heads/main/pocs/poc1
+```
+5. command for reproducing the error
 ```
 cat poc1 | binutils/cxxfilt
 ```
-Download poc1: [id\:000882\,81570046\,sig\:06\,src\:008892\,op\:havoc\,rep\:128](https://github.com/fengzhengzhan/FzzVul/blob/main/nasm/nasm_2-14rc0_heap-buffer-overflow_preproc1227.zip)
-git clone https://github.com/caozhzh/CRGF-Vul.git /
 
 ## crash report
 ```
-> cat /CRGF-Vul/pocs/id\:000882\,81570046\,sig\:06\,src\:008892\,op\:havoc\,rep\:128 | binutils/cxxfilt 
+> cat poc1 | binutils/cxxfilt 
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
 ==27924==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x00000087be86 bp 0x7ffc63aaf760 sp 0x7ffc63aaf680 T0)
