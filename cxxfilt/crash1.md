@@ -73,6 +73,3 @@ AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /binutils-2.26/libiberty/./cp-demangle.c:1596:7 in d_unqualified_name
 ==27924==ABORTING
 ```
-Use CVE-2025-66861 for:
-
-** RESERVED ** An issue was discovered in function d_unqualified_name in file cp-demangle.c in BinUtils 2.26 allowing attackers to cause a denial of service via crafted PE file
