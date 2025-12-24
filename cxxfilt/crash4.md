@@ -1,3 +1,7 @@
+Use CVE-2025-66865 for:
+
+** RESERVED ** An issue was discovered in function d_print_comp_inner in file cp-demangle.c in BinUtils 2.26 allows attackers to cause a denial of service via crafted PE file.
+
 # stack-overflow /binutils-2.26/libiberty/./cp-demangle.c:4320 in d_print_comp_inner
 
 ## Environment

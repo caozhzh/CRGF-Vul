@@ -1,3 +1,7 @@
+Use CVE-2025-66866 for:
+
+** RESERVED ** An issue was discovered in function d_abi_tags in file cp-demangle.c in BinUtils 2.26 allows attackers to cause a denial of service via crafted PE file.
+
 # SEGV /binutils-2.26/libiberty/./cp-demangle.c:1311:17 in d_abi_tags
 
 ## Environment

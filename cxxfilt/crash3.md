@@ -1,3 +1,7 @@
+Use CVE-2025-66862 for:
+
+** RESERVED ** A buffer overflow vulnerability in function gnu_special in file cplus-dem.c in BinUtils 2.26 allows attackers to cause a denial of service via crafted PE file.
+
 # heap-buffer-overflow /binutils-2.26/libiberty/./cplus-dem.c:2954:10 in gnu_special
 
 ## Environment

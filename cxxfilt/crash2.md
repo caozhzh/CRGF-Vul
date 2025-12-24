@@ -1,3 +1,8 @@
+Use CVE-2025-66863 for:
+
+** RESERVED ** An issue was discovered in function d_discriminator in file cp-demangle.c in BinUtils 2.26 allows attackers to cause a denial of service via crafted PE file.
+
+
 # SEGV /binutils-2.26/libiberty/./cp-demangle.c:3471:7 in d_discriminator
 
 ## Environment
